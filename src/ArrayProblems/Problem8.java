@@ -6,6 +6,7 @@ public class Problem8 {
 
         int [] arr = {12,345,2,6};
         System.out.println(findNumbers(arr));
+
     }
 
     static int findNumbers(int[] nums){
@@ -21,19 +22,11 @@ public class Problem8 {
     }
 
     static boolean even (int num){
-
         int numberofDigits = digits(num);
         return numberofDigits % 2 == 0;
     }
 
     static int digits(int num){
-        int count = 0;
-
-        while (num > 0){
-
-            count++;
-            num = num / 10;
-        }
-        return count;
+        return (int)Math.floor(Math.log10(num)) + 1;
     }
 }
