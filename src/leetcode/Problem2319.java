@@ -1,8 +1,7 @@
 package leetcode;
 import java.util.Scanner;
 
-public class IfelseGridProblem {
-
+public class Problem2319 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -41,5 +40,3 @@ public class IfelseGridProblem {
         return true;
     }
 }
-
-
