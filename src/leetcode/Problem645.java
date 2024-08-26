@@ -3,11 +3,12 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Problem442 {
+public class Problem645 {
     public static void main(String[] args) {
-        int[] arr = {4,3,2,7,8,2,3,1};
+        int[] arr = {1,1};
         cycleSort(arr);
-        System.out.println(Arrays.toString(fnidDuplicates(arr)));
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(findtheNumber(arr)));
     }
 
     static void cycleSort(int[] arr){
@@ -26,20 +27,13 @@ public class Problem442 {
         }
     }
 
-    static int[] fnidDuplicates(int[] arr){
-        ArrayList<Integer> DuplicateElements = new ArrayList<>();
-
+    static int[] findtheNumber(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             if(i != arr[i] - 1){
-                DuplicateElements.add(arr[i]);
+                return new int[] {arr[i],i + 1};
             }
         }
 
-        int[] result = new int[DuplicateElements.size()];
-        for (int i = 0; i < DuplicateElements.size(); i++) {
-            result[i] = DuplicateElements.get(i);
-        }
-
-        return result;
+        return new int[]{};
     }
 }
