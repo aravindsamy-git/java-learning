@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class Problem268 {
     public static void main(String[] args) {
-        int[] arr = {9,6,4,2,3,5,7,0,1};
+        int[] arr = {4,3,2,7,8,2,3,1};
         cycleSort(arr);
+        System.out.println(Arrays.toString(arr));
         System.out.println(findMissing(arr));
         System.out.println(findMissingElement(arr));
     }
