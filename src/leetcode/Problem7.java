@@ -1,7 +1,12 @@
 package leetcode;
 
 public class Problem7 {
-    public int reverse(int x) {
+
+    public static void main(String[] args) {
+        System.out.println(reverse(35235326));
+    }
+
+    public static int reverse(int x) {
         int reversed = 0;
 
         while (x != 0) {
