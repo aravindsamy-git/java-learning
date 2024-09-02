@@ -6,6 +6,8 @@ public class Problem12 {
         System.out.println(intToRoman(3749));
         System.out.println(intToRoman(58));
         System.out.println(intToRoman(1994));
+        System.out.println(intToRoman(4));
+        System.out.println(intToRoman(9));
     }
 
     public static String intToRoman(int num) {
