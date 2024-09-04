@@ -10,6 +10,7 @@ public class LinearSearch {
         findIndexAll(arr,4,0);
         System.out.println(list);
         System.out.println(findIndexAll(arr,4,0,new ArrayList<>()));
+        System.out.println(findindexAll(arr,4,0));
     }
 
     static boolean find(int[] arr, int target, int index){
@@ -33,7 +34,6 @@ public class LinearSearch {
     }
 
     static ArrayList<Integer> list = new ArrayList<>();
-
     static void findIndexAll(int[] arr, int target, int index){
         if(index == arr.length){
             return;
@@ -53,5 +53,18 @@ public class LinearSearch {
         }
 
         return findIndexAll(arr,target,index + 1,list);
+    }
+
+    static ArrayList<Integer> findindexAll(int[] arr,int target,int index){
+        ArrayList<Integer> list = new ArrayList<>();
+        if(index == arr.length){
+            return list;
+        }
+        if(arr[index] == target){
+            list.add(index);
+        }
+        ArrayList<Integer> finalList = findindexAll(arr,target,index+1);
+        list.addAll(finalList);
+        return list;
     }
 }
