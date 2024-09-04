@@ -1,4 +1,4 @@
-package recursionImp.pattern;
+package recursionImp;
 
 public class Triangle {
     public static void main(String[] args) {
