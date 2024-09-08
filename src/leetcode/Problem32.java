@@ -5,7 +5,7 @@ import java.util.Stack;
 public class Problem32 {
 
     public static void main(String[] args) {
-
+        System.out.println(longestValidParentheses(")()())"));
     }
 
     public static int longestValidParentheses(String s) {
