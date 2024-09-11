@@ -23,13 +23,9 @@ public class Problem22 {
 
     public static void main(String[] args) {
         Problem22 solution = new Problem22();
-
-        // Example 1
         int n1 = 3;
         List<String> result1 = solution.generateParenthesis(n1);
         System.out.println("All combinations of well-formed parentheses for n = " + n1 + ": " + result1);
-
-        // Example 2
         int n2 = 1;
         List<String> result2 = solution.generateParenthesis(n2);
         System.out.println("All combinations of well-formed parentheses for n = " + n2 + ": " + result2);
