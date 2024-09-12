@@ -12,7 +12,7 @@ public class Problem17 {
     public static void main(String[] args) {
         String digits = "23";
         List<String> result = letterCombinations(digits);
-        System.out.println(result);  // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+        System.out.println(result);
     }
 
     public static List<String> letterCombinations(String digits) {
