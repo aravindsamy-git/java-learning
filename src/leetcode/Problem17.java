@@ -10,7 +10,7 @@ public class Problem17 {
     };
 
     public static void main(String[] args) {
-        String digits = "23";
+        String digits = "79";
         List<String> result = letterCombinations(digits);
         System.out.println(result);
     }
