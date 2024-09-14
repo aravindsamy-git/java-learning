@@ -16,6 +16,14 @@ public class MazeProblem {
         };
 
         System.out.println(pathwithRestrictions("",board,0,0));
+
+        boolean[][] maze = {
+                {true,true,true},
+                {true,true,true},
+                {true,true,true}
+        };
+
+        System.out.println(allpath("",maze,0,0));
     }
 
     static int pathCount(int r , int c){
@@ -93,9 +101,7 @@ public class MazeProblem {
         ArrayList<String> list = new ArrayList<>();
 
         if(!maze[r][c]) {
-            ArrayList<String> list2 = new ArrayList<>();
-            list2.add(p);
-            return list2;
+            return list;
         }
 
         if(r < maze.length - 1 && c > maze[0].length - 1){
@@ -107,6 +113,42 @@ public class MazeProblem {
         if(c < maze[0].length - 1){
             list.addAll(pathwithRestrictions(p + 'H', maze ,r, c + 1));
         }
+
+        return list;
+    }
+
+    static ArrayList<String> allpath(String p , boolean[][] maze, int r , int c){
+        if(r == maze.length - 1 && c == maze[0].length - 1){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        ArrayList<String> list = new ArrayList<>();
+
+        if(!maze[r][c]) {
+            return list;
+        }
+
+        maze[r][c] = false;
+
+        if(r < maze.length - 1 && c > maze[0].length - 1){
+            list.addAll(allpath(p + 'X', maze ,r + 1, c + 1));
+        }
+        if(r < maze.length - 1){
+            list.addAll(allpath(p + 'D', maze ,r + 1, c));
+        }
+        if(c < maze[0].length - 1){
+            list.addAll(allpath(p + 'R', maze ,r, c + 1));
+        }
+        if(r > 0){
+            list.addAll(allpath(p+ 'U' ,maze,r-1,c));
+        }
+        if(c > 0){
+            list.addAll(allpath(p+ 'L' ,maze,r,c - 1));
+        }
+
+        maze[r][c] = true;
 
         return list;
     }
