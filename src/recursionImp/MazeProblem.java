@@ -1,6 +1,7 @@
 package recursionImp;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MazeProblem {
     public static void main(String[] args) {
@@ -24,6 +25,15 @@ public class MazeProblem {
         };
 
         System.out.println(allpath("",maze,0,0));
+
+        boolean[][] mazeAll = {
+                {true,true,true},
+                {true,true,true},
+                {true,true,true}
+        };
+
+        int[][] path = new int[mazeAll.length][mazeAll[0].length];
+        System.out.println(allpathPrint("",mazeAll,0,0,1,path));
     }
 
     static int pathCount(int r , int c){
@@ -149,6 +159,49 @@ public class MazeProblem {
         }
 
         maze[r][c] = true;
+
+        return list;
+    }
+
+    static ArrayList<String> allpathPrint(String p , boolean[][] maze, int r , int c, int step,int[][] path){
+        if(r == maze.length - 1 && c == maze[0].length - 1){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            path[r][c] = step;
+            for(int[] arr: path) {
+                System.out.println(Arrays.toString(arr));
+            }
+            System.out.println();
+            return list;
+        }
+
+        ArrayList<String> list = new ArrayList<>();
+
+        if(!maze[r][c]) {
+            return list;
+        }
+
+        maze[r][c] = false;
+        path[r][c] = step;
+
+        if(r < maze.length - 1 && c > maze[0].length - 1){
+            list.addAll(allpathPrint(p + 'X', maze ,r + 1, c + 1, step+1, path));
+        }
+        if(r < maze.length - 1){
+            list.addAll(allpathPrint(p + 'D', maze ,r + 1, c , step+1, path));
+        }
+        if(c < maze[0].length - 1){
+            list.addAll(allpathPrint(p + 'R', maze ,r, c + 1, step+1, path));
+        }
+        if(r > 0){
+            list.addAll(allpathPrint(p+ 'U' ,maze,r-1,c, step+1, path));
+        }
+        if(c > 0){
+            list.addAll(allpathPrint(p+ 'L' ,maze,r,c - 1, step+1, path));
+        }
+
+        maze[r][c] = true;
+        path[r][c] = 0;
 
         return list;
     }
