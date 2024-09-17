@@ -2,6 +2,14 @@ package recursionImp;
 
 public class NKnights {
 
+    public static void main(String[] args) {
+
+        int n = 4;
+        boolean[][] board = new boolean[n][n];
+        Knight(board,0,0,4);
+
+    }
+
     static void Knight(boolean[][] board, int row, int col , int knights){
 
         if (knights == 0){
