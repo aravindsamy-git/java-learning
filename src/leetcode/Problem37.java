@@ -15,7 +15,6 @@ public class Problem37 {
                 {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         };
-
         solveSudoku(board);
     }
 
@@ -27,7 +26,7 @@ public class Problem37 {
 
         int[] emptyCell = findFirstEmptyCell(board);
         if (emptyCell == null) {
-            return; // Should not happen, as completed is checked above
+            return;
         }
 
         int row = emptyCell[0];
@@ -67,21 +66,18 @@ public class Problem37 {
     public static boolean isSafe(char[][] board, int num, int row, int col) {
         char ch = (char) ('0' + num);
 
-        // Check row
         for (int j = 0; j < board.length; j++) {
             if (board[row][j] == ch) {
                 return false;
             }
         }
 
-        // Check column
         for (int i = 0; i < board.length; i++) {
             if (board[i][col] == ch) {
                 return false;
             }
         }
 
-        // Check 3x3 box
         int k = (int) Math.sqrt(board.length);
         int startRow = row - (row % k);
         int startCol = col - (col % k);
