@@ -1,11 +1,14 @@
 package recursionImp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class NQueens {
     public static void main(String[] args) {
 
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        System.out.println(queens(board,0));
+        System.out.println(solveNQueens(board,0));
     }
 
     static int queens(boolean[][] board,int row){
@@ -65,4 +68,45 @@ public class NQueens {
             System.out.println();
         }
     }
+
+    static ArrayList<ArrayList<String>> solveNQueens(boolean[][] board,int row){
+
+        if(row == board.length){
+            ArrayList<ArrayList<String>> result = new ArrayList<>();
+            List<String> boardRepresentation = getString(board);
+            result.add(new ArrayList<>(boardRepresentation));
+            return result;
+        }
+
+        ArrayList<ArrayList<String>> list = new ArrayList<>();
+
+        for (int col = 0; col < board.length; col++) {
+            if(isSafe(board,row,col)){
+                board[row][col] = true;
+                list.addAll(solveNQueens(board,row + 1));
+                board[row][col] = false;
+            }
+        }
+
+        return list;
+
+    }
+
+    private static List<String> getString(boolean[][] board) {
+        List<String> result = new ArrayList<>();
+        for (boolean[] row : board) {
+            StringBuilder rowString = new StringBuilder();
+            for (boolean element : row) {
+                if (element) {
+                    rowString.append("Q");
+                } else {
+                    rowString.append(".");
+                }
+            }
+            result.add(rowString.toString());
+        }
+
+        return result;
+    }
+
 }
