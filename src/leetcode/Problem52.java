@@ -2,15 +2,13 @@ package leetcode;
 
 public class Problem52 {
     public static void main(String[] args) {
-        int n = 4;
+        int n = 1;
         boolean[][] board = new boolean[n][n];
         System.out.println(queens(board,0));
     }
 
     static int queens(boolean[][] board,int row){
         if(row == board.length){
-            display(board);
-            System.out.println();
             return 1;
         }
 
@@ -49,19 +47,5 @@ public class Problem52 {
         }
 
         return true;
-    }
-
-    private static void display(boolean[][] board){
-        for (boolean[] row: board){
-            for (boolean element: row){
-                if(element) {
-                    System.out.print("Q");
-                }
-                else {
-                    System.out.print(".");
-                }
-            }
-            System.out.println();
-        }
     }
 }
