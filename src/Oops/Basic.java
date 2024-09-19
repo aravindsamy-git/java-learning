@@ -3,24 +3,24 @@ package Oops;
 import java.util.Arrays;
 
 public class Basic {
-
     public static void main(String[] args) {
-        Student student1 = new Student();
-        student1.name = "Aravind";
-        student1.rno = 123456789;
-        student1.marks = 98;
-
+        Student student1 = new Student("Aravind Samy",1234,98.0f);
         System.out.println(student1.getName());
     }
-
 }
 
 class Student{
-    int rno;
+    long rno;
     String name;
     float marks;
 
     public String getName() {
         return name;
+    }
+
+    Student (String Fullname, long rollno, float mark) {
+        name = Fullname;
+        rno = rollno;
+        marks = mark;
     }
 }
