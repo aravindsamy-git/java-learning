@@ -7,19 +7,12 @@ public class Problem214 {
     }
 
     public  static String shortestPalindrome(String s) {
-        StringBuilder rev = new StringBuilder(s).reverse();  // Reverse the string
+        StringBuilder rev = new StringBuilder(s).reverse();
         String revStr = rev.toString();
-
-        // Create a string that appends original string and reversed string with a separator
         String combined = s + "#" + revStr;
-
-        // Find the longest palindromic prefix
-        int[] lps = computeLPS(combined);  // Get longest prefix which is also suffix
-
-        // Characters to add from the reverse string (remaining part)
+        int[] lps = computeLPS(combined);
         String toAdd = revStr.substring(0, s.length() - lps[lps.length - 1]);
-
-        return toAdd + s;  // Prepend to original string
+        return toAdd + s;
     }
 
     private static int[] computeLPS(String str) {
