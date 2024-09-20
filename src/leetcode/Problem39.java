@@ -22,15 +22,11 @@ public class Problem39 {
         }
 
         for (int i = start; i < candidates.length; i++) {
-
             if (candidates[i] > target){
                 continue;
             }
-
             currentCombination.add(candidates[i]);
-
             findCombinations(candidates,target - candidates[i],result,currentCombination,i);
-
             currentCombination.remove(currentCombination.size() - 1);
         }
     }
