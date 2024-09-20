@@ -25,9 +25,9 @@ public class Problem39 {
 
             currentCombination.add(candidates[i]);
 
-            findCombinations(candidates,(target - candidates[i]),result,currentCombination,i);
+            findCombinations(candidates,target - candidates[i],result,currentCombination,i);
 
-            currentCombination.remove(candidates[i]);
+            currentCombination.remove(currentCombination.size() - 1);
         }
     }
 }
