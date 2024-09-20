@@ -18,17 +18,13 @@ public class Problem5 {
 
     public static String[] getAllSubstring(String s){
         ArrayList<String> list = new ArrayList<>();
-
         for (int length = 1; length <= s.length(); length++) {
             for (int i = 0; i <= s.length() - length; i++) {
                 list.add(s.substring(i, i + length));
             }
         }
-
         String[] substringsArray = list.toArray(new String[0]);
-
         return substringsArray;
-
     }
 
     public static boolean checkPalindrom(String s){
