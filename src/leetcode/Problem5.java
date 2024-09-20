@@ -7,7 +7,6 @@ public class Problem5 {
 
     public static void main(String[] args) {
         String[] list = getAllSubstring("babad");
-
         for (int i = list.length - 1; i > 0; i--) {
             if (checkPalindrom(list[i])){
                 System.out.println(list[i]);
