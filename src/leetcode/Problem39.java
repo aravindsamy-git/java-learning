@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class Problem39 {
 
+    public static void main(String[] args) {
+        System.out.println(combinationSum(new int[]{2,3,5}, 8));
+    }
+
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         findCombinations(candidates, target, result, new ArrayList<>(), 0);
