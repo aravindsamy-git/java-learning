@@ -2,6 +2,10 @@ package leetcode;
 
 public class Problem214 {
 
+    public static void main(String[] args) {
+        System.out.println(shortestPalindrome("abcd"));
+    }
+
     public static String shortestPalindrome(String s) {
 
         int i = 0;
