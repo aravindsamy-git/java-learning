@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Problem5 {
 
     public static void main(String[] args) {
-        String[] list = getAllSubstring("babad");
+        String[] list = getAllSubstring("abcd");
         for (int i = list.length - 1; i > 0; i--) {
             if (checkPalindrom(list[i])){
                 System.out.println(list[i]);
