@@ -36,7 +36,7 @@ public class Problem5 {
         return true;
     }
 
-    public String longestPalindrome(String s) {
+    public static String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -51,7 +51,7 @@ public class Problem5 {
         return s.substring(start, end + 1);
     }
 
-    private int expandAroundCenter(String s, int left, int right) {
+    private static int expandAroundCenter(String s, int left, int right) {
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
