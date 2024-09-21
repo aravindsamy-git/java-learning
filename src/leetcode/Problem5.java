@@ -12,6 +12,8 @@ public class Problem5 {
                 break;
             }
         }
+
+        System.out.println(longestPalindrome("babad"));
     }
 
     public static String[] getAllSubstring(String s){
