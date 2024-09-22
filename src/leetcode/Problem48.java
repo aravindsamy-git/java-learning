@@ -3,7 +3,6 @@ package leetcode;
 public class Problem48 {
     public static void main(String[] args) {
 
-        // Example input matrix
         int[][] matrix = {
                 {1, 2, 3},
                 {4, 5, 6},
