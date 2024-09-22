@@ -2,7 +2,23 @@ package leetcode;
 
 public class Problem48 {
     public static void main(String[] args) {
+        Solution solution = new Solution();
 
+        // Example input matrix
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        System.out.println("Original Matrix:");
+        printMatrix(matrix);
+
+        // Rotate the matrix by 90 degrees clockwise
+        solution.rotate(matrix);
+
+        System.out.println("Matrix after 90-degree rotation:");
+        printMatrix(matrix);
     }
 
     public void rotate(int[][] matrix) {
