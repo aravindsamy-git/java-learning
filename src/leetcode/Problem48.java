@@ -8,7 +8,6 @@ public class Problem48 {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
 
-        // Step 1: Transpose the matrix (swap rows and columns)
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
                 int temp = matrix[i][j];
@@ -17,7 +16,6 @@ public class Problem48 {
             }
         }
 
-        // Step 2: Reverse each row
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n / 2; j++) {
                 int temp = matrix[i][j];
