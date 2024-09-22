@@ -24,4 +24,14 @@ public class Problem48 {
             }
         }
     }
+
+    // Helper function to print the matrix
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int elem : row) {
+                System.out.print(elem + " ");
+            }
+            System.out.println();
+        }
+    }
 }
