@@ -4,15 +4,15 @@ public class Problem6 {
     public static void main(String[] args) {
         String input1 = "PAYPALISHIRING";
         int numRows1 = 3;
-        System.out.println(zigzagTraverse(input1, numRows1)); // Output: "PAHNAPLSIIGYIR"
+        System.out.println(zigzagTraverse(input1, numRows1));
 
         String input2 = "PAYPALISHIRING";
         int numRows2 = 4;
-        System.out.println(zigzagTraverse(input2, numRows2)); // Output: "PINALSIGYAHRPI"
+        System.out.println(zigzagTraverse(input2, numRows2));
 
         String input3 = "A";
         int numRows3 = 1;
-        System.out.println(zigzagTraverse(input3, numRows3)); // Output: "A"
+        System.out.println(zigzagTraverse(input3, numRows3));
     }
 
     public static String zigzagTraverse(String str, int n) {
