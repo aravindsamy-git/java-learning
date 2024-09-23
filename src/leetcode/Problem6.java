@@ -31,16 +31,13 @@ public class Problem6 {
         for (char c : str.toCharArray()) {
             rows[currentRow].append(c);
 
-            // Change direction at the top and bottom
             if (currentRow == 0 || currentRow == n - 1) {
                 goingDown = !goingDown;
             }
 
-            // Move up or down
             currentRow += goingDown ? 1 : -1;
         }
 
-        // Build the final string from all rows
         StringBuilder result = new StringBuilder();
         for (StringBuilder row : rows) {
             result.append(row);
