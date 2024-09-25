@@ -35,34 +35,30 @@ public class Problem16 {
     }
 
     public static int closestReturn(int[] arr, int target){
-        Arrays.sort(arr); // Sort the array
+        Arrays.sort(arr);
         int n = arr.length;
-        int closestSum = arr[0] + arr[1] + arr[2]; // Initialize with the sum of the first three elements
+        int closestSum = arr[0] + arr[1] + arr[2];
 
         for (int i = 0; i < n - 2; i++) {
-            int left = i + 1; // The next element
-            int right = n - 1; // The last element
+            int left = i + 1;
+            int right = n - 1;
 
             while (left < right) {
                 int sum = arr[i] + arr[left] + arr[right];
 
-                // Update the closest sum if this sum is closer to the target
                 if (Math.abs(sum - target) < Math.abs(closestSum - target)) {
                     closestSum = sum;
                 }
 
-                // Move the pointers based on the comparison with target
                 if (sum < target) {
-                    left++; // We need a larger sum
+                    left++;
                 } else if (sum > target) {
-                    right--; // We need a smaller sum
+                    right--;
                 } else {
-                    // If sum is exactly equal to target, return it immediately
                     return sum;
                 }
             }
         }
-
-        return closestSum; // Return the closest sum found
+        return closestSum;
     }
 }
