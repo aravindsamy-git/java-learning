@@ -17,7 +17,6 @@ public class Problem69 {
 
         while (left <= right) {
             int mid = left + (right - left) / 2;
-
             if (mid <= x / mid) {
                 result = mid;
                 left = mid + 1;
