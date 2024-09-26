@@ -2,6 +2,10 @@ package leetcode;
 
 public class Problem69 {
 
+    public static void main(String[] args) {
+
+    }
+
     public static int mySqrt(int x) {
         if (x == 0) {
             return 0; // Edge case: The square root of 0 is 0.
