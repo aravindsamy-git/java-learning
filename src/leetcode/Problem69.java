@@ -3,7 +3,7 @@ package leetcode;
 public class Problem69 {
 
     public static void main(String[] args) {
-
+        System.out.println(mySqrt(5));
     }
 
     public static int mySqrt(int x) {
