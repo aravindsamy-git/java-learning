@@ -10,7 +10,6 @@ public class Problem69 {
         if (x == 0) {
             return 0;
         }
-
         int left = 1;
         int right = x;
         int result = 0;
@@ -24,7 +23,6 @@ public class Problem69 {
                 right = mid - 1;
             }
         }
-
         return result;
     }
 
