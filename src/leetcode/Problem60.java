@@ -40,7 +40,7 @@ public class Problem60 {
 
         for (int i = 0; i <= p.length(); i++) {
             String f = p.substring(0,i);
-            String s = p.substring(i,p.length());
+            String s = p.substring(i);
             ans.addAll(permutationList(f + ch + s,up.substring(1)));
         }
 
