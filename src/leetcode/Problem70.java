@@ -17,15 +17,11 @@ public class Problem70 {
         if (target == 1) {
             return 1;
         }
-
         if (memo.containsKey(target)) {
             return memo.get(target);
         }
-
         int count = climbStairs(target - 1) + climbStairs(target - 2);
-
         memo.put(target, count);
-
         return count;
     }
 }
