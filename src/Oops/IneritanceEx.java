@@ -41,8 +41,29 @@ class BoxWeight extends IneritanceEx{
         this.weight = -1;
     }
 
+    BoxWeight (BoxWeight other) {
+        super(other);
+        weight = other.weight;
+    }
+
     public BoxWeight(double l, double h , double w , double weight){
         super(l,h,w);
         this.weight = weight;
+    }
+}
+
+class Boxprice extends BoxWeight {
+    double price;
+
+    Boxprice(double price) {
+        this.price = price;
+    }
+}
+
+class Boxcolor extends BoxWeight {
+    String color;
+
+    Boxcolor(String color) {
+        this.color = color;
     }
 }
