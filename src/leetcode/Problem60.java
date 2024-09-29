@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class Problem60 {
     public static void main(String[] args) {
-        System.out.println(getPermutation(4,1));
+        System.out.println(getPermutation(9,15));
     }
 
     public static String getPermutationM(int n, int k) {
@@ -62,33 +62,28 @@ public class Problem60 {
     }
 
     public static String getPermutation(int n, int k) {
-        // Create a list of numbers to get permutations from
         ArrayList<Integer> numbers = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             numbers.add(i);
         }
 
-        // Decrement k to convert it to zero-based index
         k--;
 
         StringBuilder result = new StringBuilder();
 
-        // Precompute factorial values
         int factorial = 1;
         for (int i = 1; i < n; i++) {
             factorial *= i;
         }
 
         for (int i = 0; i < n; i++) {
-            // Determine the index of the current number to add
             int index = k / factorial;
             result.append(numbers.get(index));
             numbers.remove(index);
 
-            // Update k and factorial for the next position
             k %= factorial;
             if (i < n - 1) {
-                factorial /= (n - 1 - i); // Decrease factorial for the next position
+                factorial /= (n - 1 - i);
             }
         }
 
