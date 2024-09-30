@@ -2,6 +2,10 @@ package leetcode;
 
 public class Problem31 {
 
+    public static void main(String[] args) {
+
+    }
+
     public static void nextpermutation(int[] nums){
         int n = nums.length;
         int i = n - 2;
