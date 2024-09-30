@@ -1,9 +1,13 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class Problem31 {
 
     public static void main(String[] args) {
-
+        int[] nums = {3,2,1};
+        nextpermutation(nums);
+        System.out.println(Arrays.toString(nums));
     }
 
     public static void nextpermutation(int[] nums){
