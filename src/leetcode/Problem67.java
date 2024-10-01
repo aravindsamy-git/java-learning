@@ -1,7 +1,12 @@
 package leetcode;
 
 public class Problem67 {
-    public String addBinary(String a, String b) {
+
+    public static void main(String[] args) {
+
+    }
+
+    public static String addBinary(String a, String b) {
         StringBuilder result = new StringBuilder();
         int i = a.length() - 1;  // Pointer for string a
         int j = b.length() - 1;  // Pointer for string b
