@@ -4,13 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Problem1331 {
-
-    public static void main(String[] args) {
-        int[] arr = {40, 10, 20, 40};
-        int[] result = arrayRankTransform(arr);
-        System.out.println(Arrays.toString(result)); // Output: [3, 1, 2, 3]
-    }
-
     public static int[] arrayRankTransform(int[] arr) {
         // Step 1: Create a copy of the original array and sort it
         int[] sortedArr = arr.clone();
