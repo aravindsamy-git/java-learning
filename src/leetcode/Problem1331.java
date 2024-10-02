@@ -8,7 +8,7 @@ public class Problem1331 {
     public static void main(String[] args) {
         int[] arr = {40, 10, 20, 40};
         int[] result = arrayRankTransform(arr);
-        System.out.println(Arrays.toString(result)); // Output: [3, 1, 2, 3]
+        System.out.println(Arrays.toString(result));
     }
 
 
