@@ -11,7 +11,6 @@ public class Problem1331 {
         System.out.println(Arrays.toString(result));
     }
 
-
     public static int[] arrayRankTransform(int[] arr) {
         int[] sortedArr = arr.clone();
         Arrays.sort(sortedArr);
