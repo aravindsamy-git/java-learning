@@ -6,7 +6,8 @@ import java.util.List;
 public class Problem40 {
 
     public static void main(String[] args) {
-
+        int[] candidates = {10,1,2,7,6,1,5};
+        System.out.println(combinationSum2(candidates,8));
     }
 
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
