@@ -26,11 +26,9 @@ public class Problem40 {
             if (i > start && candidates[i] == candidates[i - 1]) {
                 continue;
             }
-
             if (candidates[i] > target) {
                 break;
             }
-
             current.add(candidates[i]);
             backtrack(candidates, target - candidates[i], i + 1, current, result);
             current.remove(current.size() - 1);
