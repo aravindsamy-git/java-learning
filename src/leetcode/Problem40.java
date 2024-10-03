@@ -6,7 +6,7 @@ import java.util.List;
 public class Problem40 {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
-        Arrays.sort(candidates); // Sort the array to handle duplicates easily
+        Arrays.sort(candidates);
         backtrack(candidates, target, 0, new ArrayList<>(), result);
         return result;
     }
