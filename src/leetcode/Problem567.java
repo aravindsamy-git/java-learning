@@ -6,10 +6,6 @@ public class Problem567 {
 
     public static void main(String[] args) {
 
-        String a = "abc";
-        String b = "df";
-
-
     }
 
 
@@ -34,9 +30,14 @@ public class Problem567 {
         return ans;
     }
 
-    static boolean ispersent(ArrayList<String> list){
+    static boolean ispersent(ArrayList<String> list,String s2){
 
+        for (int i = 0; i < list.size(); i++) {
+            if (s2.contains(list.get(i))){
+                return true;
+            }
+        }
 
-
+        return false;
     }
 }
