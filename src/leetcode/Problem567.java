@@ -5,7 +5,11 @@ import java.util.ArrayList;
 public class Problem567 {
 
     public static void main(String[] args) {
+        String a = "ab";
+        String b = "eidboaoo";
 
+        ArrayList<String> list = permutationList("",a);
+        System.out.println(ispersent(list,b));
     }
 
 
@@ -31,13 +35,11 @@ public class Problem567 {
     }
 
     static boolean ispersent(ArrayList<String> list,String s2){
-
         for (int i = 0; i < list.size(); i++) {
             if (s2.contains(list.get(i))){
                 return true;
             }
         }
-
         return false;
     }
 }
