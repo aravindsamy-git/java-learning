@@ -34,4 +34,9 @@ public class Problem567 {
         return ans;
     }
 
+    static boolean ispersent(ArrayList<String> list){
+
+
+
+    }
 }
