@@ -9,6 +9,7 @@ public class Problem567 {
         String b = "eidboaoo";
         ArrayList<String> list = permutationList("",a);
         System.out.println(ispersent(list,b));
+        System.out.println(checkInclusion(a,b));
     }
 
 
@@ -29,6 +30,17 @@ public class Problem567 {
     }
 
     static boolean ispersent(ArrayList<String> list,String s2){
+        for (int i = 0; i < list.size(); i++) {
+            if (s2.contains(list.get(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkInclusion(String s1, String s2) {
+        ArrayList<String> list = permutationList("",s1);
+
         for (int i = 0; i < list.size(); i++) {
             if (s2.contains(list.get(i))){
                 return true;
