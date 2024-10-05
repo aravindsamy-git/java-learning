@@ -7,7 +7,6 @@ public class Problem567 {
     public static void main(String[] args) {
         String a = "ab";
         String b = "eidboaoo";
-
         ArrayList<String> list = permutationList("",a);
         System.out.println(ispersent(list,b));
     }
