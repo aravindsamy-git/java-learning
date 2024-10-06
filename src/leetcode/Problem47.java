@@ -1,12 +1,14 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Problem47 {
     public static void main(String[] args) {
         int[] nums = {1,1,2};
-        List<List<Integer>> permutations = permute(nums);
+        List<List<Integer>> permutations = permuteUnique(nums);
         System.out.println(permutations);
     }
 
@@ -19,7 +21,7 @@ public class Problem47 {
 
         int current = up.get(0);
 
-        List<List<Integer>> permutations = new ArrayList<>();
+        Set<List<Integer>> permutations = new HashSet<>();
 
         for (int i = 0; i <= p.size(); i++) {
             List<Integer> newProcessed = new ArrayList<>(p);
@@ -31,10 +33,12 @@ public class Problem47 {
             permutations.addAll(permutationList(newProcessed, newUnprocessed));
         }
 
-        return permutations;
+        List<List<Integer>> list = new ArrayList<>(permutations);
+
+        return list;
     }
 
-    public List<List<Integer>> permuteUnique(int[] nums) {
+    public static List<List<Integer>> permuteUnique(int[] nums) {
         List<Integer> unprocessedList = new ArrayList<>();
         for (int num : nums) {
             unprocessedList.add(num);
