@@ -18,10 +18,18 @@ public class Problem46 {
 
         int current = up.get(0);
 
+        List<List<Integer>> permutations = new ArrayList<>();
+
         for (int i = 0; i < p.size(); i++) {
-            p.add(i,current);
+            List<Integer> newProcessed = new ArrayList<>(p);
+            newProcessed.add(i, current);
+
+            List<Integer> newUnprocessed = new ArrayList<>(p);
+            newUnprocessed.remove(0);
+
+            permutations.addAll(permuatationList(newProcessed, newUnprocessed));
         }
 
-        return new ArrayList<>();
+        return permutations;
     }
 }
