@@ -34,7 +34,7 @@ public class Problem47 {
         return permutations;
     }
 
-    public static List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
         List<Integer> unprocessedList = new ArrayList<>();
         for (int num : nums) {
             unprocessedList.add(num);
