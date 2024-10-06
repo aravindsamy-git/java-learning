@@ -5,32 +5,29 @@ import java.util.ArrayList;
 public class Problem46 {
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 4}; // Example input
+        int[] nums = {2, 3, 4};
         List<List<Integer>> permutations = permute(nums);
         System.out.println(permutations);
     }
 
     public static List<List<Integer>> permutationList(List<Integer> p, List<Integer> up) {
-        // Base case: if unprocessed is empty, return the processed list
         if (up.isEmpty()) {
             List<List<Integer>> result = new ArrayList<>();
-            result.add(new ArrayList<>(p)); // Add a copy of the processed list
+            result.add(new ArrayList<>(p));
             return result;
         }
 
-        int current = up.get(0); // Get the first element of unprocessed
+        int current = up.get(0);
 
         List<List<Integer>> permutations = new ArrayList<>();
 
-        // Iterate through each position in the processed list to insert the current element
-        for (int i = 0; i <= p.size(); i++) { // Use i <= p.size() to allow adding at the end
-            List<Integer> newProcessed = new ArrayList<>(p); // Copy of processed list
-            newProcessed.add(i, current); // Insert current at position i
+        for (int i = 0; i <= p.size(); i++) {
+            List<Integer> newProcessed = new ArrayList<>(p);
+            newProcessed.add(i, current);
 
-            List<Integer> newUnprocessed = new ArrayList<>(up); // Create a new unprocessed list
-            newUnprocessed.remove(0); // Remove the first element
+            List<Integer> newUnprocessed = new ArrayList<>(up);
+            newUnprocessed.remove(0);
 
-            // Recursive call to generate permutations
             permutations.addAll(permutationList(newProcessed, newUnprocessed));
         }
 
@@ -38,7 +35,6 @@ public class Problem46 {
     }
 
     public static List<List<Integer>> permute(int[] nums) {
-        // Convert the integer array to a list
         List<Integer> unprocessedList = new ArrayList<>();
         for (int num : nums) {
             unprocessedList.add(num);
