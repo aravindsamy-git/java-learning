@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Problem46 {
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 4};
+        int[] nums = {1,1,2};
         List<List<Integer>> permutations = permute(nums);
         System.out.println(permutations);
     }
