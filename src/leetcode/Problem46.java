@@ -4,6 +4,16 @@ import java.util.ArrayList;
 
 public class Problem46 {
 
+    public static void main(String[] args) {
+        List<Integer> unprocessedList = List.of(1, 2, 3);
+        List<List<Integer>> result = generatePermutations(new ArrayList<>(), unprocessedList);
+
+        // Print the result
+        for (List<Integer> permutation : result) {
+            System.out.println(permutation);
+        }
+    }
+
     public static List<List<Integer>> generatePermutations(List<Integer> processed, List<Integer> unprocessed) {
         // Base case: if unprocessed is empty, return the processed list
         if (unprocessed.isEmpty()) {
