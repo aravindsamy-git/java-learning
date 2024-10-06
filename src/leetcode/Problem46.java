@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Problem46 {
 
     public static void main(String[] args) {
-        List<Integer> unprocessedList = List.of(1); // Example input
-        List<List<Integer>> permutations = permutationList(new ArrayList<>(), unprocessedList);
+        int[] nums = {2, 3, 4}; // Example input
+        List<List<Integer>> permutations = permute(nums);
         System.out.println(permutations);
     }
 
@@ -37,7 +37,7 @@ public class Problem46 {
         return permutations;
     }
 
-    public List<List<Integer>> permute(int[] nums) {
+    public static List<List<Integer>> permute(int[] nums) {
         // Convert the integer array to a list
         List<Integer> unprocessedList = new ArrayList<>();
         for (int num : nums) {
