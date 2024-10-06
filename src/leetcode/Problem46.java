@@ -36,4 +36,13 @@ public class Problem46 {
 
         return permutations;
     }
+
+    public List<List<Integer>> permute(int[] nums) {
+        // Convert the integer array to a list
+        List<Integer> unprocessedList = new ArrayList<>();
+        for (int num : nums) {
+            unprocessedList.add(num);
+        }
+        return permutationList(new ArrayList<>(), unprocessedList);
+    }
 }
