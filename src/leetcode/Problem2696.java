@@ -11,8 +11,8 @@ public class Problem2696 {
         String current = s;
 
         while (current.contains("AB") || current.contains("CD")) {
-            current = current.replace("AB", "");  // Remove first substring
-            current = current.replace("CD", "");  // Remove second substring
+            current = current.replace("AB", "");
+            current = current.replace("CD", "");
         }
 
         return current.length();
