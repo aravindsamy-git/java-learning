@@ -2,6 +2,9 @@ package leetcode;
 
 public class Problem2696 {
 
+    public static void main(String[] args) {
+        System.out.println(minLength("ACBBD"));
+    }
 
     public static int minLength(String s) {
 
